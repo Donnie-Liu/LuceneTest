@@ -46,9 +46,26 @@ namespace LuceneTest
             {
                 s += word.Word + "{POS:" + word.Pos + " Position:" + word.Position + " Rank:" + word.Rank + " Freqency:" + word.Frequency + "}<br> ";
             }
+            WordInfo x = words.ElementAt(4);
 
             MsgLbl.Text = s;
 
+        }
+
+        protected List<String> PhraseTemplate(ICollection<WordInfo> words)
+        {
+            List<String> keywordslist = new List<string>();
+            int count = words.Count;
+            int i=0;
+            while (i < count)
+            {
+                WordInfo first = words.ElementAt(i);
+                WordInfo second = words.ElementAt(i + 1);
+                WordInfo third = words.ElementAt(i + 2);
+
+            }
+
+            return keywordslist;
         }
 
 //        protected void CreateBtn1_Click(object sender, EventArgs e)
